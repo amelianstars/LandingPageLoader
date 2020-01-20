@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+.preload{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #37d0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s ease;
+}
+
+.preload-finish{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#preparing{
+    font-size: 4vh;
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+}
+
+#blue-plane{
+height: 300px;
+animation: airplane 1s ease infinite alternate;
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3{
+width:17%;
+max-width: 200px;
+position: absolute;
+right: 0%;
+z-index: -1;
+}
+
+.cloud-1{
+    top: 25%;
+    transform: translate(100%, -25%);
+    animation: clouds 3s ease infinite;
+}
+
+.cloud-2{
+    top: 50%;
+    transform: translate(100%, -50%);
+    animation: clouds 3s ease infinite 4s;
+
+}
+
+.cloud-3{
+    top: 75%;
+    transform: translate(100%, -75%);
+    animation: clouds 3s ease infinite 2s;
+
+}
+
+
+@keyframes airplane{
+    from{
+      transform: translateY(0px);
+    }
+
+    to{
+      transform: translateY(50px);
+    }
+
+}
+#arrival{
+    height: 100vh;
+    z-index: -6;
+
+}
+
+#arrival h1{
+    margin-top: 300px;
+    text-align: center;
+    font-size: 5vh;
+    margin-bottom: 100px;
+    font-family: 'Rock Salt' , cursive;
+}
+#happy-dog{
+    height: 500px;
+    top: 40%;
+    position: absolute;
+    display: block;
+    z-index: -5;
+    left: 35vw;
+    width: 30%;
+    animation: bounce .35s infinite alternate;
+    -webkit-animation: bounce .35s infinite alternate;
+
+}
+
+
+
+
+@keyframes clouds{
+    from{
+        right: 0%;
+    }
+
+    to{
+        right: 130%;
+    }
+}
+
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-30px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-30px);
+    }
+  }
